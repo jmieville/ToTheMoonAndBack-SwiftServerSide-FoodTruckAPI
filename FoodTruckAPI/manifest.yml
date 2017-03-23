@@ -1,0 +1,10 @@
+applications:
+ - path: .
+   memory: 64M
+   instances: 1
+   domain: au-syd.mybluemix.net
+   name: marc-foodtruck-api
+   host: marc-foodtruck-api
+   disk_quota: 1024M
+   buildpack: swift_buildpack
+   command: FoodTruckServer 
