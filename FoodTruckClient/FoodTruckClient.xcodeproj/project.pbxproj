@@ -169,6 +169,7 @@
 				49E61BD31E82DBD300D8EF7C /* Main.storyboard */,
 				49E61BD81E82DBD300D8EF7C /* LaunchScreen.storyboard */,
 				49C6E3201E8691CF00461A59 /* FoodTruckCell.swift */,
+				49C6E32A1E86C62300461A59 /* ReviewCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -182,7 +183,6 @@
 				49C6E3241E86BA6A00461A59 /* ReviewsVC.swift */,
 				49C6E3261E86BAAB00461A59 /* AddTruckVC.swift */,
 				49C6E3281E86BABA00461A59 /* AddReviewVC.swift */,
-				49C6E32A1E86C62300461A59 /* ReviewCell.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";

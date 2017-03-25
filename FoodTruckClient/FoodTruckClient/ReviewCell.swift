@@ -20,7 +20,7 @@ class ReviewCell: UITableViewCell {
     
     func configureCell(review: FoodTruckReview) {
         titleLabel.text = review.reviewTitle
-        textLabel?.text = review.reviewText
+        reviewTextLabel.text = review.reviewText
     }
 
 }
