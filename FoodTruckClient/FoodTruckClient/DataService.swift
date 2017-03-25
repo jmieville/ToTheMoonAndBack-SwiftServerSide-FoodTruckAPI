@@ -41,6 +41,8 @@ class DataService {
             }
             print("Alamofire request succeeded: HTTP \(statusCode)")
             self.foodTrucks = FoodTruck.parseFoodTruckJSONData(data: data)
+            print(data)
+            self.delegate?.trucksLoaded()
         }
     }
     
