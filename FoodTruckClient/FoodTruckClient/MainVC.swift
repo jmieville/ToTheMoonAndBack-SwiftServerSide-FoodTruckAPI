@@ -14,6 +14,7 @@ class MainVC: UIViewController {
     
     @IBAction func addButtonTapped(sender: UIButton) {
         self.trucksLoaded()
+        performSegue(withIdentifier: "showAddTruckVC", sender: self)
     }
     
     var dataService = DataService.instance
@@ -30,7 +31,12 @@ class MainVC: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
+        if segue.identifier == "showDetailsVC" {
+            if let indexPath = tableView.indexPathForSelectedRow {
+                let destinationViewController = segue.destination as! DetailsVC
+                destinationViewController.selectedFoodTruck = dataService.foodTrucks[indexPath.row]
+            }
+        }
     }
 }
 
