@@ -43,6 +43,9 @@
                                             <constraint firstAttribute="width" constant="46" id="XnV-JG-KbM"/>
                                         </constraints>
                                         <state key="normal" image="ChatCompose"/>
+                                        <connections>
+                                            <action selector="addButtonTappedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kxf-d7-m03"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -111,6 +114,10 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="1OT-pL-RIn"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="785-cY-dGX"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -125,6 +132,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Vw2-87-xRF"/>
+                    <connections>
+                        <outlet property="tableView" destination="uVR-yn-uOJ" id="1LV-i7-oCf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
