@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		49C6E31F1E868F4D00461A59 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C6E31E1E868F4D00461A59 /* MainVC.swift */; };
 		49C6E3211E8691CF00461A59 /* FoodTruckCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C6E3201E8691CF00461A59 /* FoodTruckCell.swift */; };
+		49C6E3231E86A67600461A59 /* DetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C6E3221E86A67600461A59 /* DetailsVC.swift */; };
 		49E61BD01E82DBD300D8EF7C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E61BCF1E82DBD300D8EF7C /* AppDelegate.swift */; };
 		49E61BD51E82DBD300D8EF7C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49E61BD31E82DBD300D8EF7C /* Main.storyboard */; };
 		49E61BD71E82DBD300D8EF7C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49E61BD61E82DBD300D8EF7C /* Assets.xcassets */; };
@@ -38,6 +39,7 @@
 		448F4C694E2C5109DD685FA0 /* Pods-FoodTruckClientTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodTruckClientTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FoodTruckClientTests/Pods-FoodTruckClientTests.release.xcconfig"; sourceTree = "<group>"; };
 		49C6E31E1E868F4D00461A59 /* MainVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		49C6E3201E8691CF00461A59 /* FoodTruckCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodTruckCell.swift; sourceTree = "<group>"; };
+		49C6E3221E86A67600461A59 /* DetailsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsVC.swift; sourceTree = "<group>"; };
 		49E61BCC1E82DBD300D8EF7C /* FoodTruckClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodTruckClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49E61BCF1E82DBD300D8EF7C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		49E61BD41E82DBD300D8EF7C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -159,6 +161,7 @@
 				49E61BD31E82DBD300D8EF7C /* Main.storyboard */,
 				49E61BD81E82DBD300D8EF7C /* LaunchScreen.storyboard */,
 				49C6E3201E8691CF00461A59 /* FoodTruckCell.swift */,
+				49C6E3221E86A67600461A59 /* DetailsVC.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -388,6 +391,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				49E61C2C1E82E12600D8EF7C /* FoodTruckReview.swift in Sources */,
+				49C6E3231E86A67600461A59 /* DetailsVC.swift in Sources */,
 				49C6E31F1E868F4D00461A59 /* MainVC.swift in Sources */,
 				49E61BD01E82DBD300D8EF7C /* AppDelegate.swift in Sources */,
 				49C6E3211E8691CF00461A59 /* FoodTruckCell.swift in Sources */,
