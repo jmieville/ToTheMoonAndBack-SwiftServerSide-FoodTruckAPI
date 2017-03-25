@@ -14,6 +14,7 @@ class MainVC: UIViewController {
     
     @IBAction func addButtonTapped(sender: UIButton) {
         self.trucksLoaded()
+        performSegue(withIdentifier: "showAddTruckVC", sender: self)
     }
     
     var dataService = DataService.instance
