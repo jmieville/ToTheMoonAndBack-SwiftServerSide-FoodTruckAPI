@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		49C6E31F1E868F4D00461A59 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C6E31E1E868F4D00461A59 /* MainVC.swift */; };
+		49C6E3211E8691CF00461A59 /* FoodTruckCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C6E3201E8691CF00461A59 /* FoodTruckCell.swift */; };
 		49E61BD01E82DBD300D8EF7C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E61BCF1E82DBD300D8EF7C /* AppDelegate.swift */; };
-		49E61BD21E82DBD300D8EF7C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E61BD11E82DBD300D8EF7C /* ViewController.swift */; };
 		49E61BD51E82DBD300D8EF7C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49E61BD31E82DBD300D8EF7C /* Main.storyboard */; };
 		49E61BD71E82DBD300D8EF7C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49E61BD61E82DBD300D8EF7C /* Assets.xcassets */; };
 		49E61BDA1E82DBD300D8EF7C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49E61BD81E82DBD300D8EF7C /* LaunchScreen.storyboard */; };
@@ -35,9 +36,10 @@
 		236DE4BB1DDEC73DE55216DE /* Pods_FoodTruckClientTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FoodTruckClientTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		324A6BCAC57F2AE58EF246F6 /* Pods-FoodTruckClientTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodTruckClientTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FoodTruckClientTests/Pods-FoodTruckClientTests.debug.xcconfig"; sourceTree = "<group>"; };
 		448F4C694E2C5109DD685FA0 /* Pods-FoodTruckClientTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodTruckClientTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FoodTruckClientTests/Pods-FoodTruckClientTests.release.xcconfig"; sourceTree = "<group>"; };
+		49C6E31E1E868F4D00461A59 /* MainVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
+		49C6E3201E8691CF00461A59 /* FoodTruckCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodTruckCell.swift; sourceTree = "<group>"; };
 		49E61BCC1E82DBD300D8EF7C /* FoodTruckClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodTruckClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49E61BCF1E82DBD300D8EF7C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		49E61BD11E82DBD300D8EF7C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		49E61BD41E82DBD300D8EF7C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		49E61BD61E82DBD300D8EF7C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		49E61BD91E82DBD300D8EF7C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -156,6 +158,7 @@
 			children = (
 				49E61BD31E82DBD300D8EF7C /* Main.storyboard */,
 				49E61BD81E82DBD300D8EF7C /* LaunchScreen.storyboard */,
+				49C6E3201E8691CF00461A59 /* FoodTruckCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -164,7 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				49E61BCF1E82DBD300D8EF7C /* AppDelegate.swift */,
-				49E61BD11E82DBD300D8EF7C /* ViewController.swift */,
+				49C6E31E1E868F4D00461A59 /* MainVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -385,8 +388,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				49E61C2C1E82E12600D8EF7C /* FoodTruckReview.swift in Sources */,
-				49E61BD21E82DBD300D8EF7C /* ViewController.swift in Sources */,
+				49C6E31F1E868F4D00461A59 /* MainVC.swift in Sources */,
 				49E61BD01E82DBD300D8EF7C /* AppDelegate.swift in Sources */,
+				49C6E3211E8691CF00461A59 /* FoodTruckCell.swift in Sources */,
 				49E61C2E1E82F8AE00D8EF7C /* DataService.swift in Sources */,
 				49E61C281E82DF4600D8EF7C /* Constants.swift in Sources */,
 				49E61C2A1E82E11700D8EF7C /* FoodTruck.swift in Sources */,
