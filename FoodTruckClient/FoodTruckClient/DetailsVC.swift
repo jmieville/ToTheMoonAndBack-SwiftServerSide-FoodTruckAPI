@@ -52,11 +52,21 @@ class DetailsVC: UIViewController {
     }
     
     @IBAction func reviewsButtonTapped(sender: UIButton) {
-        
+        performSegue(withIdentifier: "showReviewsVC", sender: self)
     }
     
     @IBAction func addReviewButtonTapped(sender: UIButton) {
-        
+        performSegue(withIdentifier: "showAddReviewVC", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showReviewsVC" {
+            let destinationViewController = segue.destination as! ReviewsVC
+            destinationViewController.selectedFoodTruck = selectedFoodTruck
+        } else if segue.identifier == "showAddReviewVC" {
+            let destinationViewController = segue.destination as! AddReviewVC
+            destinationViewController.selectedFoodTruck = selectedFoodTruck
+        }
     }
 
 }
