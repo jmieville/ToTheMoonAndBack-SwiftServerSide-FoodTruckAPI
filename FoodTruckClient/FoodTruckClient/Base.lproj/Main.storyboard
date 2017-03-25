@@ -332,38 +332,40 @@
                                     <constraint firstAttribute="height" constant="65" id="y4j-Gd-khN"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="84" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hr5-wV-2Xj">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="99" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hr5-wV-2Xj">
                                 <rect key="frame" x="0.0" y="85" width="375" height="582"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ReviewCell" rowHeight="84" id="67q-1v-JWO" customClass="ReviewCell" customModule="FoodTruckClient" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="84"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ReviewCell" rowHeight="99" id="67q-1v-JWO" customClass="ReviewCell" customModule="FoodTruckClient" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="99"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="67q-1v-JWO" id="M5R-bj-4Qz">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="83"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="98"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" layoutMarginsFollowReadableWidth="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wQF-bM-lh6">
-                                                    <rect key="frame" x="16" y="67" width="343" height="0.0"/>
-                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
-                                                    <color key="textColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" layoutMarginsFollowReadableWidth="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vtZ-1J-NVB">
-                                                    <rect key="frame" x="16" y="16" width="343" height="21"/>
-                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
-                                                    <color key="textColor" red="1" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="BXu-l3-fLs">
+                                                    <rect key="frame" x="16" y="16" width="343" height="74.5"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" layoutMarginsFollowReadableWidth="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vtZ-1J-NVB">
+                                                            <rect key="frame" x="0.0" y="0.0" width="343" height="0.0"/>
+                                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                                            <color key="textColor" red="1" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" layoutMarginsFollowReadableWidth="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wQF-bM-lh6">
+                                                            <rect key="frame" x="0.0" y="8" width="343" height="66.5"/>
+                                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                                            <color key="textColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="vtZ-1J-NVB" firstAttribute="leading" secondItem="M5R-bj-4Qz" secondAttribute="leading" constant="16" id="6bX-59-LIc"/>
-                                                <constraint firstItem="wQF-bM-lh6" firstAttribute="leading" secondItem="M5R-bj-4Qz" secondAttribute="leadingMargin" constant="8" id="8lH-pX-bOJ"/>
-                                                <constraint firstItem="wQF-bM-lh6" firstAttribute="top" secondItem="vtZ-1J-NVB" secondAttribute="bottom" constant="30" id="UyM-9u-jRZ"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="wQF-bM-lh6" secondAttribute="trailing" constant="8" id="bEg-PF-moH"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="wQF-bM-lh6" secondAttribute="bottom" constant="8" id="dgv-5q-UH4"/>
-                                                <constraint firstItem="vtZ-1J-NVB" firstAttribute="top" secondItem="M5R-bj-4Qz" secondAttribute="top" constant="16" id="pVF-Kp-FMI"/>
-                                                <constraint firstAttribute="trailing" secondItem="vtZ-1J-NVB" secondAttribute="trailing" constant="16" id="tfM-nV-v7n"/>
+                                                <constraint firstItem="BXu-l3-fLs" firstAttribute="top" secondItem="M5R-bj-4Qz" secondAttribute="top" constant="16" id="6tw-lA-d52"/>
+                                                <constraint firstAttribute="trailing" secondItem="BXu-l3-fLs" secondAttribute="trailing" constant="16" id="GSX-5a-K6x"/>
+                                                <constraint firstAttribute="bottom" secondItem="BXu-l3-fLs" secondAttribute="bottom" constant="8" id="Gd2-ts-vyR"/>
+                                                <constraint firstItem="BXu-l3-fLs" firstAttribute="leading" secondItem="M5R-bj-4Qz" secondAttribute="leading" constant="16" id="JIX-N5-M05"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -483,19 +485,19 @@
                                         <rect key="frame" x="0.0" y="76" width="301" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Latitude Decimal Degrees" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ekf-Nq-STF">
                                         <rect key="frame" x="0.0" y="114" width="301" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Longitude Decimal Degrees" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lU5-YA-0eI">
                                         <rect key="frame" x="0.0" y="152" width="301" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
                                     </textField>
                                 </subviews>
                                 <constraints>
