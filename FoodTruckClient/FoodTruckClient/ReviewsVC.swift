@@ -26,7 +26,8 @@ class ReviewsVC: UIViewController {
         
         if let truck = selectedFoodTruck {
             nameLabel.text = truck.name
-            dataService.getAllReviews(truck)
+            dataService.getAllReviews(truck, completion: { (Success) in
+            })
         }
         
         tableView.rowHeight = UITableViewAutomaticDimension
@@ -43,7 +44,7 @@ extension ReviewsVC: DataServiceDelegate {
         // do not nothing
     }
     func reviewsLoaded() {
-        OperationQueue.main.addOperation {
+        DispatchQueue.main.async {
             self.tableView.reloadData()
         }
     }

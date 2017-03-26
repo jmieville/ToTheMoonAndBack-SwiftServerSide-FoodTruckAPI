@@ -16,7 +16,7 @@ class AddTruckVC: UIViewController {
     @IBOutlet weak var latField: UITextField!
     @IBOutlet weak var longitudeField: UITextField!
     
-    @IBOutlet weak var spinner: UIActivity!
+    @IBOutlet weak var spinner: UIActivityIndicatorView!
     
     var dataService = DataService.instance
 
@@ -26,6 +26,8 @@ class AddTruckVC: UIViewController {
     }
     
     @IBAction func addButtonTapped(sender: UIButton) {
+        
+        spinner.startAnimating()
         guard let name = nameField.text, nameField.text != "" else {
             showAlert(with: "Error", message: "Please enter a name")
             return
@@ -47,7 +49,7 @@ class AddTruckVC: UIViewController {
             return
         }
         
-        dataService.addNedFoodTruck(name, foodType: foodType, avgCost: avgCost, latitude: latitude, longitude: longitude) { Success in
+        dataService.addNewFoodTruck(name, foodType: foodType, avgCost: avgCost, latitude: latitude, longitude: longitude) { Success in
             if Success {
                 print("\(name) was added successfully")
                 self.dataService.getAllFoodTrucks(completion: { (Success) in
@@ -73,7 +75,7 @@ class AddTruckVC: UIViewController {
     }
     
     func dismissViewController() {
-        OperationQueue.main.addOperation {
+        DispatchQueue.main.async {
             _ = self.navigationController?.popViewController(animated: true)
         }
     }
@@ -83,5 +85,6 @@ class AddTruckVC: UIViewController {
         let okAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
         alertController.addAction(okAction)
         present(alertController, animated: true, completion: nil)
+        spinner.stopAnimating()
     }
 }

@@ -123,6 +123,11 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="785-cY-dGX"/>
                                 </connections>
                             </tableView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="QbF-E2-wxp">
+                                <rect key="frame" x="177" y="323" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -137,6 +142,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="Vw2-87-xRF"/>
                     <connections>
+                        <outlet property="spinner" destination="QbF-E2-wxp" id="fhk-BL-oHT"/>
                         <outlet property="tableView" destination="uVR-yn-uOJ" id="1LV-i7-oCf"/>
                         <segue destination="il3-4k-w5x" kind="show" identifier="showAddTruckVC" id="FiP-l5-D8P"/>
                     </connections>
@@ -360,7 +366,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="99"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="67q-1v-JWO" id="M5R-bj-4Qz">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="98"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="99"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="eAH-VP-69d">
@@ -502,8 +508,8 @@
                                 <color key="textColor" red="1" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Geu-pM-8DP">
-                                <rect key="frame" x="16" y="152" width="343" height="204"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Geu-pM-8DP">
+                                <rect key="frame" x="16" y="155" width="343" height="204"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ZpW-81-bOe">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="30"/>
@@ -572,6 +578,9 @@
                                     <constraint firstItem="ZpW-81-bOe" firstAttribute="top" secondItem="Geu-pM-8DP" secondAttribute="top" id="ybk-QO-qDb"/>
                                 </constraints>
                             </stackView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="3Wg-XU-BJM">
+                                <rect key="frame" x="177" y="323.5" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -579,6 +588,8 @@
                             <constraint firstAttribute="trailingMargin" secondItem="Geu-pM-8DP" secondAttribute="trailing" id="7uk-gS-9m3"/>
                             <constraint firstItem="Mam-fK-oWG" firstAttribute="leading" secondItem="DuS-Cr-mgm" secondAttribute="leading" id="9Lh-89-imC"/>
                             <constraint firstItem="loL-jX-onW" firstAttribute="top" secondItem="Mam-fK-oWG" secondAttribute="bottom" constant="18" id="JD8-ee-O1l"/>
+                            <constraint firstItem="3Wg-XU-BJM" firstAttribute="centerY" secondItem="DuS-Cr-mgm" secondAttribute="centerY" id="KCF-kT-ovB"/>
+                            <constraint firstItem="3Wg-XU-BJM" firstAttribute="centerX" secondItem="DuS-Cr-mgm" secondAttribute="centerX" id="LVP-8C-Mz7"/>
                             <constraint firstItem="Geu-pM-8DP" firstAttribute="leading" secondItem="DuS-Cr-mgm" secondAttribute="leadingMargin" id="fD1-Ei-3Q1"/>
                             <constraint firstItem="Mam-fK-oWG" firstAttribute="top" secondItem="zPX-FA-xhL" secondAttribute="bottom" id="igC-i0-RQt"/>
                             <constraint firstItem="Geu-pM-8DP" firstAttribute="top" secondItem="loL-jX-onW" secondAttribute="bottom" constant="24" id="o9O-Zz-alO"/>
@@ -590,6 +601,7 @@
                         <outlet property="headerLabel" destination="gbf-ZC-ofo" id="OHK-ma-Nfa"/>
                         <outlet property="reviewTextField" destination="syS-4O-3nN" id="pXq-ki-fTL"/>
                         <outlet property="reviewTitleTextField" destination="IV2-9b-EIe" id="B0q-hF-m4s"/>
+                        <outlet property="spinner" destination="3Wg-XU-BJM" id="iFU-8Z-k7Y"/>
                         <outlet property="starRatingLabel" destination="Phb-bd-cmo" id="ZDj-uH-qjn"/>
                         <outlet property="starRatingStepper" destination="U9b-G3-DMO" id="8S4-hj-gne"/>
                     </connections>
@@ -712,6 +724,10 @@
                                     <constraint firstAttribute="height" constant="68" id="y3H-zQ-uV2"/>
                                 </constraints>
                             </stackView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="E0s-9Q-qCQ">
+                                <rect key="frame" x="177" y="323" width="20" height="20"/>
+                                <color key="color" cocoaTouchSystemColor="darkTextColor"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -722,6 +738,8 @@
                             <constraint firstItem="7lk-wD-H7Z" firstAttribute="leading" secondItem="sL0-OU-W0r" secondAttribute="leadingMargin" constant="21" id="bAU-vA-2z4"/>
                             <constraint firstAttribute="trailingMargin" secondItem="7lk-wD-H7Z" secondAttribute="trailing" constant="21" id="daz-z4-a5w"/>
                             <constraint firstItem="Nmb-Ce-K5v" firstAttribute="leading" secondItem="sL0-OU-W0r" secondAttribute="leadingMargin" constant="21" id="eWa-na-fG6"/>
+                            <constraint firstItem="E0s-9Q-qCQ" firstAttribute="centerY" secondItem="sL0-OU-W0r" secondAttribute="centerY" id="ejB-Bv-5Hv"/>
+                            <constraint firstItem="E0s-9Q-qCQ" firstAttribute="centerX" secondItem="sL0-OU-W0r" secondAttribute="centerX" id="h1N-rh-XEo"/>
                             <constraint firstAttribute="trailing" secondItem="ehE-hl-hme" secondAttribute="trailing" id="tvl-Jb-67t"/>
                             <constraint firstItem="7lk-wD-H7Z" firstAttribute="top" secondItem="Nmb-Ce-K5v" secondAttribute="bottom" constant="62" id="vvH-ut-DVe"/>
                         </constraints>
@@ -732,6 +750,7 @@
                         <outlet property="latField" destination="Ekf-Nq-STF" id="ZWc-9u-fuM"/>
                         <outlet property="longitudeField" destination="lU5-YA-0eI" id="wiE-eU-YhY"/>
                         <outlet property="nameField" destination="hHv-vy-tiN" id="1t5-Dy-QmO"/>
+                        <outlet property="spinner" destination="E0s-9Q-qCQ" id="RBH-cF-J1a"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="esE-lA-ZDD" userLabel="First Responder" sceneMemberID="firstResponder"/>

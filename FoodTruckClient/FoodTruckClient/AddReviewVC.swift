@@ -13,6 +13,8 @@ class AddReviewVC: UIViewController {
     var selectedFoodTruck: FoodTruck?
     var dataService = DataService.instance
     
+    @IBOutlet weak var spinner: UIActivityIndicatorView!
+    
     @IBOutlet weak var headerLabel: UILabel!
     @IBOutlet weak var reviewTitleTextField: UITextField!
     @IBOutlet weak var reviewTextField: UITextView!
@@ -21,6 +23,8 @@ class AddReviewVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        spinner.startAnimating()
 
         if let truck = selectedFoodTruck {
             headerLabel.text = truck.name
@@ -47,9 +51,13 @@ class AddReviewVC: UIViewController {
         dataService.addNewReview(truck.docId, title: title, text: text, rating: rating) { (Success) in
             if Success {
                 print("Review successfully added")
-                self.dataService.getAllReviews(truck)
-                self.dataService.getAverageStarRatingForTruck(truck)
-                self.dismissViewController()
+                self.dataService.getAverageStarRatingForTruck(truck, completion: { (Success) in
+                    if Success {
+                        self.dismissViewController()
+                    } else {
+                        self.showAlert(with: "Error", message: "An unknown error has occurred")
+                    }
+                })
             } else {
                 self.showAlert(with: "Error", message: "An error occurred saving the new review")
             }
@@ -66,7 +74,7 @@ class AddReviewVC: UIViewController {
         dismissViewController()
     }
     func dismissViewController() {
-        OperationQueue.main.addOperation {
+        DispatchQueue.main.async {
             _ = self.navigationController?.popViewController(animated: true)
         }
     }
@@ -76,5 +84,6 @@ class AddReviewVC: UIViewController {
         let okAction = UIAlertAction(title: "Error", style: .default, handler: nil)
         alertController.addAction(okAction)
         present(alertController, animated: true, completion: nil)
+        spinner.stopAnimating()
     }
 }

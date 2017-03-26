@@ -31,11 +31,16 @@ class DetailsVC: UIViewController {
             return
         }
         
-        dataService.getAverageStarRatingForTruck(truck)
+        dataService.getAverageStarRatingForTruck(truck) { (Success) in
+            if Success {
+                self.avgRatingLabel.text = "\(self.dataService.avgRating)"
+            } else {
+                self.avgRatingLabel.text = "0"
+            }
+        }
         
         nameLabel.text = truck.name
         foodTypeLabel.text = truck.foodType
-        avgRatingLabel.text = "\(dataService.avgRating)"
         avgCostLabel.text = "$\(truck.avgCost)"
         
         mapView.addAnnotation(truck)
@@ -80,7 +85,7 @@ extension DetailsVC: DataServiceDelegate {
         // do nothin
     }
     func avgRatingUpdated() {
-        OperationQueue.main.addOperation {
+        DispatchQueue.main.async {
             let rating = self.dataService.avgRating
             self.avgRatingLabel.text = "\(rating)"
         }

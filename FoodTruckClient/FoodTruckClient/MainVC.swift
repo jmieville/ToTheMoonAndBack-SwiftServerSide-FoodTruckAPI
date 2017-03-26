@@ -11,6 +11,7 @@ import UIKit
 class MainVC: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var spinner: UIActivityIndicatorView!
     
     @IBAction func addButtonTapped(sender: UIButton) {
         self.trucksLoaded()
@@ -26,8 +27,11 @@ class MainVC: UIViewController {
         
         tableView.delegate = self
         tableView.dataSource = self
+        
+        spinner.startAnimating()
 
-        dataService.getAllFoodTrucks()
+        dataService.getAllFoodTrucks { (Success) in
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -42,9 +46,10 @@ class MainVC: UIViewController {
 
 extension MainVC: DataServiceDelegate {
     func trucksLoaded() {
-        OperationQueue.main.addOperation {
+        DispatchQueue.main.async {
             print("trucksLoaded()")
             self.tableView.reloadData()
+            self.spinner.stopAnimating()
         }
     }
     func reviewsLoaded() {
