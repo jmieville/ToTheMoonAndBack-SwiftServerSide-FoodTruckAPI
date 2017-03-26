@@ -4,7 +4,6 @@ import HeliumLogger
 import LoggerAPI
 import CloudFoundryEnv
 import FoodTruckAPI
-import Configuration
 
 HeliumLogger.use()
 
@@ -16,14 +15,14 @@ do {
     Log.info("Init with Service")
     trucks = FoodTruck(service: service)
 } catch {
-    Log.info("Could not retrieve CF environment: init with defaults")
+    Log.info("Could not retreive CF env: init with defaults")
     trucks = FoodTruck()
 }
 
 let controller = FoodTruckController(backend: trucks)
 
 do {
-    let port = try ConfigurationManager().port
+    let port = try CloudFoundryEnv.getAppEnv().port
     Log.verbose("Assigned port \(port)")
     
     Kitura.addHTTPServer(onPort: port, with: controller.router)
@@ -31,4 +30,3 @@ do {
 } catch {
     Log.error("Server failed to start!")
 }
-

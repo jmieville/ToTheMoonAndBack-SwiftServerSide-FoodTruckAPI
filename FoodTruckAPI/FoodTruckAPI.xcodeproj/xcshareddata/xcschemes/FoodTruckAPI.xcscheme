@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "OBJ_168"
+               BlueprintIdentifier = "OBJ_161"
                BuildableName = "LoggerAPI.framework"
                BlueprintName = "LoggerAPI"
                ReferencedContainer = "container:FoodTruckAPI.xcodeproj">
@@ -28,7 +28,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "OBJ_175"
+               BlueprintIdentifier = "OBJ_168"
                BuildableName = "Socket.framework"
                BlueprintName = "Socket"
                ReferencedContainer = "container:FoodTruckAPI.xcodeproj">
@@ -42,7 +42,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "OBJ_184"
+               BlueprintIdentifier = "OBJ_177"
                BuildableName = "SSLService.framework"
                BlueprintName = "SSLService"
                ReferencedContainer = "container:FoodTruckAPI.xcodeproj">
@@ -56,7 +56,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "OBJ_193"
+               BlueprintIdentifier = "OBJ_186"
                BuildableName = "CHTTPParser.framework"
                BlueprintName = "CHTTPParser"
                ReferencedContainer = "container:FoodTruckAPI.xcodeproj">
@@ -70,7 +70,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "OBJ_208"
+               BlueprintIdentifier = "OBJ_201"
                BuildableName = "KituraNet.framework"
                BlueprintName = "KituraNet"
                ReferencedContainer = "container:FoodTruckAPI.xcodeproj">
@@ -84,7 +84,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "OBJ_256"
+               BlueprintIdentifier = "OBJ_249"
                BuildableName = "SwiftyJSON.framework"
                BlueprintName = "SwiftyJSON"
                ReferencedContainer = "container:FoodTruckAPI.xcodeproj">
@@ -98,7 +98,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "OBJ_264"
+               BlueprintIdentifier = "OBJ_257"
                BuildableName = "KituraTemplateEngine.framework"
                BlueprintName = "KituraTemplateEngine"
                ReferencedContainer = "container:FoodTruckAPI.xcodeproj">
@@ -112,7 +112,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "OBJ_271"
+               BlueprintIdentifier = "OBJ_264"
                BuildableName = "Kitura.framework"
                BlueprintName = "Kitura"
                ReferencedContainer = "container:FoodTruckAPI.xcodeproj">
@@ -126,7 +126,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "OBJ_334"
+               BlueprintIdentifier = "OBJ_327"
                BuildableName = "HeliumLogger.framework"
                BlueprintName = "HeliumLogger"
                ReferencedContainer = "container:FoodTruckAPI.xcodeproj">
@@ -140,7 +140,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "OBJ_344"
+               BlueprintIdentifier = "OBJ_337"
                BuildableName = "CouchDB.framework"
                BlueprintName = "CouchDB"
                ReferencedContainer = "container:FoodTruckAPI.xcodeproj">
@@ -154,7 +154,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "OBJ_369"
+               BlueprintIdentifier = "OBJ_362"
                BuildableName = "CouchDBSample"
                BlueprintName = "CouchDBSample"
                ReferencedContainer = "container:FoodTruckAPI.xcodeproj">
@@ -168,21 +168,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "OBJ_392"
-               BuildableName = "Configuration.framework"
-               BlueprintName = "Configuration"
-               ReferencedContainer = "container:FoodTruckAPI.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "OBJ_407"
+               BlueprintIdentifier = "OBJ_385"
                BuildableName = "CloudFoundryEnv.framework"
                BlueprintName = "CloudFoundryEnv"
                ReferencedContainer = "container:FoodTruckAPI.xcodeproj">
@@ -196,7 +182,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "OBJ_423"
+               BlueprintIdentifier = "OBJ_400"
                BuildableName = "FoodTruckAPI.framework"
                BlueprintName = "FoodTruckAPI"
                ReferencedContainer = "container:FoodTruckAPI.xcodeproj">
@@ -210,7 +196,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "OBJ_456"
+               BlueprintIdentifier = "OBJ_433"
                BuildableName = "FoodTruckServer"
                BlueprintName = "FoodTruckServer"
                ReferencedContainer = "container:FoodTruckAPI.xcodeproj">
@@ -228,7 +214,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "OBJ_490"
+               BlueprintIdentifier = "OBJ_465"
                BuildableName = "FoodTruckAPITests.xctest"
                BlueprintName = "FoodTruckAPITests"
                ReferencedContainer = "container:FoodTruckAPI.xcodeproj">
@@ -251,7 +237,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "OBJ_168"
+            BlueprintIdentifier = "OBJ_161"
             BuildableName = "LoggerAPI.framework"
             BlueprintName = "LoggerAPI"
             ReferencedContainer = "container:FoodTruckAPI.xcodeproj">

@@ -7,4 +7,6 @@ applications:
    host: marc-foodtruck-api
    disk_quota: 1024M
    buildpack: swift_buildpack
-   command: FoodTruckServer 
+   command: FoodTruckServer
+   services:
+   - marc-foodtruck-db 

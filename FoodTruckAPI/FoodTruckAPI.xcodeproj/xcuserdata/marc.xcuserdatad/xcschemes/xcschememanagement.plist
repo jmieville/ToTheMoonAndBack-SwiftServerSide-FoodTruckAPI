@@ -7,47 +7,52 @@
 		<key>CouchDBSample.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>1</integer>
+			<integer>6</integer>
 		</dict>
 		<key>FoodTruckAPI.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>0</integer>
+			<integer>2</integer>
 		</dict>
 		<key>FoodTruckServer.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>2</integer>
+			<integer>7</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>OBJ_161</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>OBJ_168</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>OBJ_175</key>
+		<key>OBJ_177</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>OBJ_184</key>
+		<key>OBJ_186</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>OBJ_193</key>
+		<key>OBJ_201</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>OBJ_208</key>
+		<key>OBJ_249</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>OBJ_256</key>
+		<key>OBJ_257</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -57,47 +62,37 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>OBJ_271</key>
+		<key>OBJ_327</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>OBJ_334</key>
+		<key>OBJ_337</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>OBJ_344</key>
+		<key>OBJ_362</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>OBJ_369</key>
+		<key>OBJ_385</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>OBJ_392</key>
+		<key>OBJ_400</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>OBJ_407</key>
+		<key>OBJ_433</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>OBJ_423</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>OBJ_456</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>OBJ_490</key>
+		<key>OBJ_465</key>
 		<dict>
 			<key>primary</key>
 			<true/>
