@@ -16,6 +16,8 @@ class AddTruckVC: UIViewController {
     @IBOutlet weak var latField: UITextField!
     @IBOutlet weak var longitudeField: UITextField!
     
+    @IBOutlet weak var spinner: UIActivity!
+    
     var dataService = DataService.instance
 
     override func viewDidLoad() {
@@ -48,7 +50,14 @@ class AddTruckVC: UIViewController {
         dataService.addNedFoodTruck(name, foodType: foodType, avgCost: avgCost, latitude: latitude, longitude: longitude) { Success in
             if Success {
                 print("\(name) was added successfully")
-                self.dismissViewController()
+                self.dataService.getAllFoodTrucks(completion: { (Success) in
+                    if Success {
+                        self.dismissViewController()
+                    } else {
+                        print("An Error occurred")
+                        self.showAlert(with: "Error", message: "An error occurred saving the new food truck, please try again.")
+                    }
+                })
             } else {
                 self.showAlert(with: "Error", message: "An error occurred saving the new food truck, please try again.")
                 print("We didn't save successfully")

@@ -25,7 +25,7 @@ class DataService {
     var avgRating: Int = 0
     
     // GET all trucks ** Alamofire and SwiftyJSON
-    func getAllFoodTrucks() {
+    func getAllFoodTrucks(completion: @escaping callback) {
         let url = GET_ALL_FT_URL
         
         Alamofire.request(url, method: .get)
@@ -33,15 +33,18 @@ class DataService {
         .responseData { (response) in
             guard response.result.error == nil else {
                 print("Alamofire Request failed: \(response.result.error)")
+                completion(false)
                 return
             }
             guard let data = response.data, let statusCode = response.response?.statusCode else {
                 print("An error occured obtaining data")
+                completion(false)
                 return
             }
             print("Alamofire request succeeded: HTTP \(statusCode)")
             self.foodTrucks = FoodTruck.parseFoodTruckJSONData(data: data)
             print(data)
+            completion(true)
             self.delegate?.trucksLoaded()
         }
     }

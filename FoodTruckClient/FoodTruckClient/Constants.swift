@@ -13,8 +13,8 @@ import Foundation
 typealias callback = (_ success: Bool) -> ()
 
 // Base URL
-let BASE_API_URL = "http://localhost:8080/api/v1"
-// let BASE_API_URL = "https://marc-foodtruck-api.au-syd.mybluemix.net/api/v1"
+//let BASE_API_URL = "http://localhost:8080/api/v1"
+ let BASE_API_URL = "https://marc-foodtruck-api.au-syd.mybluemix.net/api/v1"
 
 // Get all food trucks
 let GET_ALL_FT_URL = "\(BASE_API_URL)/trucks"
