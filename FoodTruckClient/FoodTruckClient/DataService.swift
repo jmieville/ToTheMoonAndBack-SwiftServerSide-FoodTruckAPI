@@ -25,7 +25,7 @@ class DataService {
     var avgRating: Int = 0
     
     // GET all trucks ** Alamofire and SwiftyJSON
-    func getAllFoodTrucks() {
+    func getAllFoodTrucks(completion: @escaping callback) {
         let url = GET_ALL_FT_URL
         
         Alamofire.request(url, method: .get)
@@ -33,21 +33,24 @@ class DataService {
         .responseData { (response) in
             guard response.result.error == nil else {
                 print("Alamofire Request failed: \(response.result.error)")
+                completion(false)
                 return
             }
             guard let data = response.data, let statusCode = response.response?.statusCode else {
                 print("An error occured obtaining data")
+                completion(false)
                 return
             }
             print("Alamofire request succeeded: HTTP \(statusCode)")
             self.foodTrucks = FoodTruck.parseFoodTruckJSONData(data: data)
             print(data)
+            completion(true)
             self.delegate?.trucksLoaded()
         }
     }
     
     // GET all reviews for a specific food truck
-    func getAllReviews(_  truck: FoodTruck) {
+    func getAllReviews(_  truck: FoodTruck, completion: @escaping callback) {
         Alamofire.request("\(GET_ALL_FT_REVIEWS)/\(truck.docId)", method: .get)
         .validate(statusCode: 200..<300)
         .responseData { (response) in
@@ -56,15 +59,17 @@ class DataService {
                 if let data = response.data {
                     self.reviews = FoodTruckReview.parseReviewJSONData(data: data)
                     self.delegate?.reviewsLoaded()
+                    completion(true)
                 }
             } else {
                 debugPrint("Alamofire request failed: \(response.result.error)")
+                completion(false)
             }
         }
     }
     
     // POST add a new food truck
-    func addNedFoodTruck(_ name: String, foodType: String, avgCost: Double, latitude: Double, longitude: Double, completion: @escaping callback) {
+    func addNewFoodTruck(_ name: String, foodType: String, avgCost: Double, latitude: Double, longitude: Double, completion: @escaping callback) {
         let url = POST_ADD_NEW_TRUCK
         
         // Add headers
@@ -92,7 +97,6 @@ class DataService {
                     return
                 }
                 print("Alamofire request succeeded: HTTP \(statusCode)")
-                self.getAllFoodTrucks()
                 completion(true)
             } else {
                 print("HTTP request failed: \(response.result.error)")
@@ -139,7 +143,7 @@ class DataService {
     }
     
     // Get avg star rating for a specific truck
-    func getAverageStarRatingForTruck(_ truck: FoodTruck) {
+    func getAverageStarRatingForTruck(_ truck: FoodTruck, completion: @escaping callback) {
         let url = "\(GET_FT_STAR_RATING)/\(truck.docId)"
         
         Alamofire.request(url, method: .get)
@@ -150,10 +154,12 @@ class DataService {
                 if let avgRating = json["avgrating"].int {
                     self.avgRating = avgRating
                     self.delegate?.avgRatingUpdated()
+                    completion(true)
                 }
             } else {
                 self.avgRating = 0
                 self.delegate?.avgRatingUpdated()
+                completion(false)
             }
         }
     }
